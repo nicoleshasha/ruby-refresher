@@ -5,7 +5,7 @@ end
 
 # keep only the elements that start with a vowel
 def select_elements_starting_with_vowel(array)
- array.select {|item| %w(a e i o u).include?(x[0]))}
+ array.select {|item| %w(a e i o u).include?(item[0])}
 end
 
 # remove instances of nil (but NOT false) from an array
@@ -59,6 +59,11 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
+ if number > 0
+   (number * -1)
+ else
+ number
+ end
 end
 
 # turn an array of numbers into two arrays of numbers, one an array of
